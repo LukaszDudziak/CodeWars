@@ -14,4 +14,13 @@
 
 function findUniq(arr) {
   // do magic
+  let unique = arr[arr.length - 1];
+  for (i = 0; i < arr.length - 1; i++) {
+    if (arr[i] != arr[i + 1] && arr[i] != unique && arr[i] != arr[i - 1]) {
+      unique = arr[i];
+    }
+  }
+  return unique;
 }
+
+findUniq([0, 0, 0, 0, 0, 0, 1]);
